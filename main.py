@@ -1,5 +1,4 @@
 import sys
-
 #citeste si salveaza intr-o lista liniile fisierului
 def lista_fisier(fisier):
     file = open(fisier,'r')
