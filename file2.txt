@@ -1,0 +1,9 @@
+Nu e comuna.
+Propozitia 2. Propozitia 3.
+Altceva
+Comuna 1.
+Propozitia 1.
+Propozitia 1 2 3      5 6.
+Comuna 2.
+Comuna 3.Comuna 4.
+Propozitia 1 2 3      5.
