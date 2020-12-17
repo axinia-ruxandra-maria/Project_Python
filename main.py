@@ -9,7 +9,7 @@ def extrage_propozitie(linie,fisier):
     global propozitii2
     propozitie = ""
     for i in range(0, len(linie)):
-        if linie[i] != ".":
+        if linie[i] != "." and linie[i] !='?' and linie[i]!= '!':
             propozitie += linie[i]
         else:
             propozitie += linie[i]
