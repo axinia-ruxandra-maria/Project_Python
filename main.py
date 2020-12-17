@@ -1,3 +1,9 @@
+import sys
+
+def extrage_linie(lista_linii,fisier):
+    for linie in lista_linii:
+        extrage_propozitie(linie.strip(),fisier)
+
 def extrage_propozitie(linie,fisier):
     global propozitii1
     global propozitii2
@@ -42,19 +48,22 @@ def lista_fisier(fisier):
     file.close()
     return lista
 
-def extrage_linie(lista_linii,fisier):
-    for linie in lista_linii:
-        extrage_propozitie(linie.strip(),fisier)
 
-lista_linii_f1 = lista_fisier("file1.txt")
-lista_linii_f2 = lista_fisier("file2.txt")
+if len(sys.argv) != 3:
+    print("Wrong number of arguments !")
+else:
+    file1 = sys.argv[1]
+    file2 = sys.argv[2]
 
-propozitii1 =[]
-propozitii2=[]
-final_list = []
+    lista_linii_f1 = lista_fisier(file1)
+    lista_linii_f2 = lista_fisier(file2)
 
-extrage_linie(lista_linii_f1,"file1")
-extrage_linie(lista_linii_f2,"file2")
+    propozitii1 =[]
+    propozitii2=[]
+    final_list = []
 
-creeaza_lista_comuna(propozitii1,propozitii2,final_list)
-print(final_list)
+    extrage_linie(lista_linii_f1,"file1")
+    extrage_linie(lista_linii_f2,"file2")
+
+    creeaza_lista_comuna(propozitii1,propozitii2,final_list)
+    print(final_list)
